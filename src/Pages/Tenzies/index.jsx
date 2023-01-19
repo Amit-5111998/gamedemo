@@ -36,10 +36,11 @@ function Home() {
   };
 
   useEffect(() => {
+    
+    // To Check if all dies are same or not if same then set to initial 
     const firstCondition = dice.every((die) => die.isFrozen);
     const firstValue = dice[0].number;
     const secondCondition = dice.every((die) => die.number === firstValue);
-
     if (firstCondition && secondCondition) {
       setCheck(true);
     }
