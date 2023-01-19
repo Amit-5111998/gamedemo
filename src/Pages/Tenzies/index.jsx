@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.scss";
 import Dice from "../../Components/Dices/index";
 import DiceArray from "../../constant/DiceValueaArray";
+import Confetti from 'react-confetti'
 
 function Home() {
   const [dice, setDice] = useState(DiceArray);
@@ -53,6 +54,7 @@ function Home() {
 
   return (
     <div className="game__board">
+      {check && <Confetti/>}
       <div className="card">
         <h1>Tenzie</h1>
         <p>
