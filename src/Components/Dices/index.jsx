@@ -1,14 +1,13 @@
 import React from "react";
 import "./style.scss";
-function Dice({dice,frezer}) {
-  
-   return (
+function Dice({ dice, frezer }) {
+  return (
     <div className="diceCard">
-      {dice.map(items => {
+      {dice.map((items) => {
         return (
           <div
             key={items.id}
-            className={items.isFrozen ? "paused" : "notactive"}
+            className={`${items.isFrozen ? "paused" : "notactive"} numberBox`}
             onClick={() => frezer(items.id)}
           >
             <div>{items.number}</div>
