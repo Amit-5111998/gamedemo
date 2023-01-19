@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.scss";
+
 function Dice({ dice, frezer }) {
   return (
     <div className="diceCard">
@@ -10,7 +11,7 @@ function Dice({ dice, frezer }) {
             className={`${items.isFrozen ? "paused" : "notactive"} numberBox`}
             onClick={() => frezer(items.id)}
           >
-            <div>{items.number}</div>
+            <p>{items.number}</p>
           </div>
         );
       })}

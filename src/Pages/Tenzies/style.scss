@@ -1,9 +1,13 @@
 .game__board {
   background-color: black;
   padding: 20px;
+  width: 50%;
+  @media screen and (max-width: 764px) {
+    width: 100%;
+  }
   .card {
     background-color: lightgrey;
-    width: 398px;
+    // width: 398px;
     border-radius: 5px;
     padding: 20px;
     h1 {
