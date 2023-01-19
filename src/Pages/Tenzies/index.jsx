@@ -7,7 +7,9 @@ import Confetti from 'react-confetti'
 function Home() {
   const [dice, setDice] = useState(DiceArray);
   const [check, setCheck] = useState(false);
-
+  const [count,setCount] = useState(0);
+  
+  
   //To roll a dice and check if all are same and freez then set all dies to initail array
   const rollDice = () => {
     if (check) {
@@ -25,6 +27,8 @@ function Home() {
             : die;
         });
       });
+      setCount((prev)=>prev + 1);
+
     }
   };
 
@@ -58,6 +62,9 @@ function Home() {
       <div className="card">
         <h1>Tenzie</h1>
         <p>
+          Number of times you rolled the dice {count}
+        </p>
+        <p>
           Roll ntill all dice are the same. click each die to freeze it at its
           current value between rolls.
         </p>
@@ -65,6 +72,7 @@ function Home() {
         <div className="rollBtn__container">
           <button onClick={rollDice}> Roll</button>
         </div>
+        {check && <h1> You won in {count} rolls</h1>}
       </div>
     </div>
   );
