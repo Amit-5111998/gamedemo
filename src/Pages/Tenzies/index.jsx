@@ -6,7 +6,8 @@ import DiceArray from "../../constant/DiceValueaArray";
 function Home() {
   const [dice, setDice] = useState(DiceArray);
   const [check, setCheck] = useState(false);
-  
+
+  //To roll a dice and check if all are same and freez then set all dies to initail array
   const rollDice = () => {
     if (check) {
       setDice(DiceArray);
@@ -23,11 +24,16 @@ function Home() {
             : die;
         });
       });
-
     }
   };
 
-  const frezer = ( id) => {
+
+  /*
+    To freez particular dice 
+    @param(id) -- to freeze particulat element  
+  */
+
+  const frezer = (id) => {
     setDice((prevDiceSet) => {
       return prevDiceSet.map((die) => {
         return die.id === id ? { ...die, isFrozen: !die.isFrozen } : die;
@@ -36,8 +42,7 @@ function Home() {
   };
 
   useEffect(() => {
-    
-    // To Check if all dies are same or not if same then set to initial 
+    // To Check if all dies are same or not if same then set to initial
     const firstCondition = dice.every((die) => die.isFrozen);
     const firstValue = dice[0].number;
     const secondCondition = dice.every((die) => die.number === firstValue);
