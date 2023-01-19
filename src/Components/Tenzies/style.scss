@@ -1,0 +1,35 @@
+.game__board{
+    // background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .card{
+        background-color: lightgrey;
+        height: 400px;
+        width: 500px;
+        border-radius: 5px;
+        padding: 20px;
+        h1{
+            color: black;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        .rollBtn__container{
+            text-align: center;
+            margin-top: 20px;
+            button{
+                background: #5035FF;
+                min-width: 100px;
+                min-height: 30px;
+                color: white;
+                border: none;
+                font-size: 16px;
+                border-radius: 5px;
+            }
+        }
+      
+    }
+}
