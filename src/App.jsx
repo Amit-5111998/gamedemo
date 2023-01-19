@@ -1,5 +1,5 @@
 import "./App.scss";
-import Home from "./Components/Tenzies";
+import Home from "./Pages/Tenzies";
 function App() {
   return (
     <div className="mainApp">

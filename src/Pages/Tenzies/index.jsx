@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./style.scss";
-import Dice from "./../Dices/index";
+import Dice from "../../Components/Dices/index";
 import DiceArray from "../../constant/DiceValueaArray";
 
 function Home() {
